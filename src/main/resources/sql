@@ -1,0 +1,7 @@
+      CREATE TABLE operator(
+	     ID NUMBER(4),
+	     dates VARCHAR2(10),
+	     equpment varchar2(10),
+	     operators varchar2(10)
+    )
+INSERT INTO OPERATOR VALUES(1,'301', 'd',  'jemy');
