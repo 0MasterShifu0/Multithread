@@ -31,19 +31,16 @@
         #{type},
         #{userId}
         )
-    </insert>
+    </insert>-->
 
-    <update id="updateArticle" parameterType="com.example.modules.JdbcTemplate.entity.Article">
-        update article
+    <update id="updateOperator" parameterType="com.mon.project.model.welcomeDBDemo.vo.Operator">
+        update operator
         <set>
-            <if test="id != null">id = #{id},</if>
-            <if test="title != null">title = #{title},</if>
-            <if test="summary != null">summary = #{summary},</if>
-            <if test="status != null">status = #{status},</if>
-            <if test="type != null">type = #{type},</if>
-            <if test="userId != null">userId = #{userId},</if>
+            <if test="dates != null">dates = #{dates},</if>
+            <if test="equpment != null">equpment = #{equpment},</if>
+            <if test="operators != null">operators = #{operators},</if>
         </set>
-        where userId = #{userId}
-    </update>-->
+        where id = #{id}
+    </update>
 
 </mapper>

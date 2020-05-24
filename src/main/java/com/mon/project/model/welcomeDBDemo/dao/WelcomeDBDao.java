@@ -9,4 +9,7 @@ public interface WelcomeDBDao {
     public int findWelcomeDB();
 
     public Operator findOperator();
+
+    int updateOperator(Operator operator);
+
 }

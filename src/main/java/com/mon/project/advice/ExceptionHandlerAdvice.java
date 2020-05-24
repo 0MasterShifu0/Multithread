@@ -15,7 +15,7 @@ public class ExceptionHandlerAdvice {
     //拦截所有Exception,展示Error页面
     @ExceptionHandler(value = Exception.class)
     public String exception(Exception exception, WebRequest webRequest,Model model){
-        logger.error("访问 "+webRequest.getContextPath() +"报错,报错信息为: {}",exception.getMessage());
+        logger.error("访问 "+webRequest.getContextPath() +"报错,报错信息为: {}",exception.getMessage(),exception);
         model.addAttribute("erroMessage",exception.getMessage());
         return   "error";
     }
